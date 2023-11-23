@@ -1,14 +1,30 @@
 {
-    "name": "quizment/cross-proto",
-    "type": "library",
+    "description": "Set of console commands for proto files",
+    "keywords": ["cross", "console", "command", "proto", "grpc"],
+    "homepage": "https://github.com/igor-kozhevnikov/cross-proto",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Kozhevnikov",
+            "email": "igor.kozhevkov@proton.me"
+        }
+    ],
     "require": {
         "php": "^8.2",
-        "igor-kozhevnikov/cross": "^1.0"
+        "igor-kozhevnikov/cross": "^1.7.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "autoload": {
         "psr-4": {
-            "Quizment\\Cross\\Proto\\": "src/"
+            "Cross\\Proto\\": "src/"
         }
+    },
+    "scripts": {
+        "phpcs": "vendor/bin/phpcs -p --standard=phpcs.xml",
+        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
     },
     "minimum-stability": "stable",
     "prefer-stable": true

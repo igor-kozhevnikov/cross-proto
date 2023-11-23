@@ -10,26 +10,26 @@ composer require quizment/cross-proto --dev
 
 ## Commands
 
-### Compile proto files
+### Compiles proto files
 
 ```shell
 x docker:compile
 ```
 
-### Remove all generated PHP files
+### Removes all generated PHP files
 
 ```shell
 x docker:clear
 ```
 
-### Generate PHP files from proto files
+### Generates PHP files from proto files
 
 ```shell
 x docker:generate
 ```
 
-### Replace long PHP namespace to short
+### Moves generated PHP files from deep hierarchy to cursory one.
 
 ```shell
-x docker:replace
+x docker:move
 ```

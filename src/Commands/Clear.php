@@ -10,7 +10,7 @@ use Cross\Commands\ShellCommand;
 use Quizment\Cross\Proto\Config\Path;
 
 #[Name('proto:clear')]
-#[Description('Remove all generated PHP classes')]
+#[Description('Removes all generated PHP files')]
 class Clear extends ShellCommand
 {
     /**

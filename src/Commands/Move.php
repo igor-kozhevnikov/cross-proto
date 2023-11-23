@@ -10,10 +10,10 @@ use Cross\Commands\Attributes\Name;
 use Cross\Commands\ShellCommand;
 use Quizment\Cross\Proto\Config\Path;
 
-#[Name('proto:replace')]
-#[Description('Replace generated PHP classes')]
+#[Name('proto:move')]
+#[Description('Moves generated PHP files from deep hierarchy to cursory one')]
 #[Hidden]
-class Replace extends ShellCommand
+class Move extends ShellCommand
 {
     /**
      * Path config.

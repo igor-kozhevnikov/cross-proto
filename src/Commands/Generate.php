@@ -12,7 +12,7 @@ use Cross\Sequence\SequenceInterface;
 use Cross\Sequence\SequenceKeeper;
 
 #[Name('proto:generate')]
-#[Description('Generated PHP classes from proto files')]
+#[Description('Generates PHP files from proto files')]
 class Generate extends SequenceCommand
 {
     /**
@@ -23,6 +23,6 @@ class Generate extends SequenceCommand
         return Sequence::make()
             ->item(Clear::class)
             ->item(Compile::class)
-            ->item(Replace::class);
+            ->item(Move::class);
     }
 }

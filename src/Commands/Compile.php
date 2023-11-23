@@ -10,7 +10,7 @@ use Cross\Commands\ShellCommand;
 use Quizment\Cross\Proto\Config\Path;
 
 #[Name('proto:compile')]
-#[Description('Compile proto files')]
+#[Description('Compiles proto files')]
 class Compile extends ShellCommand
 {
     /**

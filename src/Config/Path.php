@@ -9,7 +9,7 @@ class Path
     /**
      * Path for generated PHP classes.
      */
-    private string $out = './grpc';
+    private string $out = './generated/grpc';
 
     /**
      * Path with proto files.
