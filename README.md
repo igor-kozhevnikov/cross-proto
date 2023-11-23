@@ -5,7 +5,7 @@ Console commands to work with proto files.
 ## Install
 
 ```shell
-composer require quizment/cross-proto --dev
+composer require igor-kozhevnikov/cross-proto --dev
 ```
 
 ## Commands
