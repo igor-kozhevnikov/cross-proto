@@ -1,0 +1,15 @@
+{
+    "name": "quizment/cross-proto",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "igor-kozhevnikov/cross": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Quizment\\Cross\\Proto\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
