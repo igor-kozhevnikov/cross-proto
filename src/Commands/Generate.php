@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Quizment\Cross\Proto\Commands;
+namespace Cross\Proto\Commands;
 
 use Cross\Commands\Attributes\Description;
 use Cross\Commands\Attributes\Name;

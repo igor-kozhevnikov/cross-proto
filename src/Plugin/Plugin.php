@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Quizment\Cross\Proto\Plugin;
+namespace Cross\Proto\Plugin;
 
 use Cross\Plugin\BasePlugin;
 

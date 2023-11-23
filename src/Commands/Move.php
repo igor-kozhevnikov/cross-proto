@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Quizment\Cross\Proto\Commands;
+namespace Cross\Proto\Commands;
 
 use Cross\Commands\Attributes\Description;
 use Cross\Commands\Attributes\Hidden;
 use Cross\Commands\Attributes\Name;
 use Cross\Commands\ShellCommand;
-use Quizment\Cross\Proto\Config\Path;
+use Cross\Proto\Config\Path;
 
 #[Name('proto:move')]
 #[Description('Moves generated PHP files from deep hierarchy to cursory one')]

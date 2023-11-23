@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Quizment\Cross\Proto\Config;
+namespace Cross\Proto\Config;
 
 class Path
 {
