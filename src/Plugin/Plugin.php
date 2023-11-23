@@ -15,6 +15,15 @@ class Plugin extends BasePlugin
 
     /**
      * @inheritDoc
+     * @return array<string, mixed>
+     */
+    public function getConfig(): array
+    {
+        return require __DIR__ . '/../../config/config.php';
+    }
+
+    /**
+     * @inheritDoc
      */
     public function getCommands(): array
     {

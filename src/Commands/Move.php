@@ -7,35 +7,20 @@ namespace Cross\Proto\Commands;
 use Cross\Commands\Attributes\Description;
 use Cross\Commands\Attributes\Hidden;
 use Cross\Commands\Attributes\Name;
-use Cross\Commands\ShellCommand;
-use Cross\Proto\Config\Path;
 
 #[Name('proto:move')]
-#[Description('Moves generated PHP files from deep hierarchy to cursory one')]
+#[Description('Moves generated PHP classes from deep hierarchy to cursory one')]
 #[Hidden]
-class Move extends ShellCommand
+class Move extends BaseCommand
 {
-    /**
-     * Path config.
-     */
-    private Path $path;
-
-    /**
-     * @inheritDoc
-     */
-    protected function setup(): void
-    {
-        $this->path = new Path();
-    }
-
     /**
      * @inheritDoc
      */
     protected function command(): string|array
     {
-        $root = $this->path->getOut();
-        $generated = $this->path->getOut('App/Grpc/Generated/*');
-        $app = $this->path->getOut('App');
+        $root = $this->getGeneratedClassesPath();
+        $generated = $this->getGeneratedClassesPath('App/Grpc/Generated/*');
+        $app = $this->getGeneratedClassesPath('App');
 
         $move = "mv $generated $root";
         $remove = "rm -rf $app";

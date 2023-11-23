@@ -16,19 +16,19 @@ composer require igor-kozhevnikov/cross-proto --dev
 x docker:compile
 ```
 
-### Removes all generated PHP files
+### Removes all generated PHP classes
 
 ```shell
 x docker:clear
 ```
 
-### Generates PHP files from proto files
+### Generates PHP classes from proto files
 
 ```shell
 x docker:generate
 ```
 
-### Moves generated PHP files from deep hierarchy to cursory one.
+### Moves generated PHP classes from deep hierarchy to cursory one.
 
 ```shell
 x docker:move

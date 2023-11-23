@@ -6,31 +6,18 @@ namespace Cross\Proto\Commands;
 
 use Cross\Commands\Attributes\Description;
 use Cross\Commands\Attributes\Name;
-use Cross\Commands\ShellCommand;
-use Cross\Proto\Config\Path;
 
 #[Name('proto:clear')]
 #[Description('Removes all generated PHP files')]
-class Clear extends ShellCommand
+class Clear extends BaseCommand
 {
-    /**
-     * Path config.
-     */
-    private Path $path;
-
-    /**
-     * @inheritDoc
-     */
-    protected function setup(): void
-    {
-        $this->path = new Path();
-    }
-
     /**
      * @inheritDoc
      */
     protected function command(): string|array
     {
-        return 'rm -rf ' . $this->path->getOut('*');
+        $path = $this->getGeneratedClassesPath('*');
+
+        return "rm -rf $path";
     }
 }

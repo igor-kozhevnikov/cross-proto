@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package entity;
+
+option php_namespace = "App\\Grpc\\Generated\\Entity\\User";
+
+message User {
+  int64 id = 1;
+}
