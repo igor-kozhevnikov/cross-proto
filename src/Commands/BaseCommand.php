@@ -9,11 +9,6 @@ use Cross\Commands\ShellCommand;
 abstract class BaseCommand extends ShellCommand
 {
     /**
-     * Base path
-     */
-    private string $basePath;
-
-    /**
      * Path to proto files.
      */
     private string $protoRootDirectory;
@@ -38,9 +33,8 @@ abstract class BaseCommand extends ShellCommand
     /**
      * @inheritDoc
      */
-    protected function setup(): void
+    protected function before(): void
     {
-        $this->basePath = $this->path('base_path');
         $this->protoRootDirectory = $this->path('proto_files.root_directory');
         $this->protoSubdirectories = $this->config('proto_files.subdirectories', scope: 'proto');
         $this->generatedClassesPath = $this->path('generated_classes_path');
@@ -89,9 +83,13 @@ abstract class BaseCommand extends ShellCommand
      */
     private function path(string $key): string
     {
-        $tail = $this->config($key, scope: 'proto');
+        $path = $this->config($key, scope: 'proto');
 
-        return isset($this->basePath) ? $this->join($this->basePath, $tail) : $tail;
+        if ($this->missingWorkingDirectory()) {
+            return $path;
+        }
+
+        return $this->join($this->getWorkingDirectory(), $path);
     }
 
     /**
