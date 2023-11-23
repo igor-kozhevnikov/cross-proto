@@ -1,4 +1,5 @@
 {
+    "name": "igor-kozhevnikov/cross-proto",
     "description": "Set of console commands for proto files",
     "keywords": ["cross", "console", "command", "proto", "grpc"],
     "homepage": "https://github.com/igor-kozhevnikov/cross-proto",
