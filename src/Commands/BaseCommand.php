@@ -33,7 +33,7 @@ abstract class BaseCommand extends ShellCommand
     /**
      * @inheritDoc
      */
-    protected function before(): void
+    protected function setup(): void
     {
         $this->protoRootDirectory = $this->path('proto_files.root_directory');
         $this->protoSubdirectories = $this->config('proto_files.subdirectories', scope: 'proto');
