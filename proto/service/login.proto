@@ -4,7 +4,7 @@ import "entity/user.proto";
 
 package service;
 
-option php_namespace = "App\\Grpc\\Generated\\Service\\Login";
+option php_namespace = "App\\Generated\\Grpc\\Service\\Login";
 
 service Login {
   rpc login (LoginRequest) returns (LoginResponse);

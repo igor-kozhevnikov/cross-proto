@@ -23,6 +23,7 @@ class Generate extends SequenceCommand
         return Sequence::make()
             ->item(Clear::class)
             ->item(Compile::class)
-            ->item(Move::class);
+            ->item(Move::class)
+            ->item(Remove::class);
     }
 }

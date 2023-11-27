@@ -9,6 +9,11 @@ use Cross\Commands\ShellCommand;
 abstract class BaseCommand extends ShellCommand
 {
     /**
+     * PHP namespace.
+     */
+    private string $namespace;
+
+    /**
      * Path to proto files.
      */
     private string $protoRootDirectory;
@@ -35,10 +40,19 @@ abstract class BaseCommand extends ShellCommand
      */
     protected function setup(): void
     {
+        $this->namespace = $this->config('namespace', scope: 'proto');
         $this->protoRootDirectory = $this->path('proto_files.root_directory');
         $this->protoSubdirectories = $this->config('proto_files.subdirectories', scope: 'proto');
         $this->generatedClassesPath = $this->path('generated_classes_path');
         $this->pluginPath = $this->path('plugin_path');
+    }
+
+    /**
+     * Returns the PHP namespace.
+     */
+    public function getNamespace(): string
+    {
+        return $this->namespace;
     }
 
     /**

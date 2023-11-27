@@ -33,3 +33,9 @@ x docker:generate
 ```shell
 x docker:move
 ```
+
+### Removes generated PHP classes deep hierarchy
+
+```shell
+x docker:remove
+```

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package entity;
 
-option php_namespace = "App\\Grpc\\Generated\\Entity\\User";
+option php_namespace = "App\\Generated\\Grpc\\Entity\\User";
 
 message User {
   int64 id = 1;

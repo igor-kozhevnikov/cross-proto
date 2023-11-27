@@ -19,12 +19,9 @@ class Move extends BaseCommand
     protected function command(): string|array
     {
         $root = $this->getGeneratedClassesPath();
-        $generated = $this->getGeneratedClassesPath('App/Grpc/Generated/*');
-        $app = $this->getGeneratedClassesPath('App');
+        $namespace = $this->getNamespace();
+        $generated = $this->getGeneratedClassesPath("$namespace/*");
 
-        $move = "mv $generated $root";
-        $remove = "rm -rf $app";
-
-        return "$move && $remove";
+        return "mv $generated $root";
     }
 }
